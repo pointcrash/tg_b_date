@@ -5,6 +5,7 @@ from aiogram.types import WebAppInfo
 from aiogram.utils.keyboard import InlineKeyboardBuilder
 
 TOKEN = "7886681164:AAGTfTQiSYv4G4Y65rllvaz0mWm8escBrrQ"
+WEB_APP = "https://330f-109-245-96-219.ngrok-free.app"
 
 bot = Bot(token=TOKEN)
 dp = Dispatcher()
@@ -15,7 +16,7 @@ async def start_command(message: types.Message):
     keyboard_builder = InlineKeyboardBuilder()
     keyboard_builder.button(
         text="Открыть WebApp",
-        web_app=WebAppInfo(url="https://fd53-109-245-96-219.ngrok-free.app"),
+        web_app=WebAppInfo(url=WEB_APP),
     )
 
     await message.answer(

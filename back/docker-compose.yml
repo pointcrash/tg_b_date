@@ -1,9 +1,7 @@
 services:
 
-  back:
-    build: 
-      context: ./back
-      dockerfile: Dockerfile
+  app:
+    build: .
     ports:
       - "8000:8000"
     depends_on:
@@ -33,16 +31,3 @@ services:
 #      PGADMIN_CONFIG_SERVER_MODE: 'False'
 #    ports:
 #      - "5050:80"
-
-
-  front:
-    build: 
-      context: ./front
-      dockerfile: Dockerfile
-    ports:
-      - "5173:5173"
-
-  bot:
-    build: 
-      context: ./bot
-      dockerfile: Dockerfile
